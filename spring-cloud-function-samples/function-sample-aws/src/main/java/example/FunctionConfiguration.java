@@ -1,7 +1,6 @@
 package example;
 
-import java.util.function.Function;
-
+import example.functions.SampleFunction;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +17,7 @@ public class FunctionConfiguration {
 	}
 
 	@Bean
-	public Function<String, String> uppercase() {
-		return value -> value.toUpperCase();
+	public SampleFunction hello() {
+		return new SampleFunction();
 	}
 }
